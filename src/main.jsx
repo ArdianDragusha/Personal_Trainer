@@ -5,7 +5,7 @@ import App from './App.jsx'
 import Customerlist from './Components/Customers/Customerlist.jsx'
 import Traininglist from './Components/Trainings/Traininglist.jsx'
 import Calendar from './Components/Calendar/Calendar.jsx'
-import Home from './components/Home.jsx'
+import Home from './Components/Home.jsx'
 
 const router = createBrowserRouter([
   {

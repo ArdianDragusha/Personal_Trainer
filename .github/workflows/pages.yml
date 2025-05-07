@@ -33,7 +33,7 @@ jobs:
         run: npm install
  
       - name: Build
-        run: npx vite build --base=/TrainingProject/
+        run: npx vite build --base=/Personal_Trainer/
  
       # Sivuston luonti valmiilla actioneilla:
       - name: Setup Pages
