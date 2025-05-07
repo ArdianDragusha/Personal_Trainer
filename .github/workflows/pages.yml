@@ -33,7 +33,7 @@ jobs:
         run: npm install
  
       - name: Build
-        run: npx vite build --base=/Personal-Trainer/
+        run: npx vite build --base=/Personal_Trainer/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
