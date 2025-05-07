@@ -9,7 +9,7 @@ function CustomDialog({ open, onClose, title, children }) {
             <div className="dialog-container" onClick={e => e.stopPropagation()}>
                 <div className="dialog-header">
                     <h2>{title}</h2>
-                    <button className="close-button" onClick={onClose}>×</button>
+                    <button className="close-button" onClick={onClose}>x</button>
                 </div>
                 <div className="dialog-content">
                     {children}

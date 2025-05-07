@@ -1,9 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Customerlist from './Components/Customers/Customerlist.jsx'
 import Traininglist from './Components/Trainings/Traininglist.jsx'
+import Calendar from './Components/Calendar/Calendar.jsx'
 import Home from './components/Home.jsx'
 
 const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: "Traininglist",
         element: <Traininglist />
+      },
+      {
+        path: "Calendar",
+        element: <Calendar />
       }
     ]
   }
