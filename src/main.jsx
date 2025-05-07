@@ -30,7 +30,10 @@ const router = createBrowserRouter([
       }
     ]
   }
-]);
+], {
+
+  basename: '/Personal_Trainer'
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
