@@ -14,10 +14,9 @@ permissions:
  
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    environment:
+     name: github-pages
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,23 +26,21 @@ jobs:
           node-version: lts/*
           cache: 'npm'
  
+      - name: Remove package-lock.json
+        run: rm package-lock.json
+
       - name: Install dependencies
         run: npm install
  
       - name: Build
-        run: npm run build
-        
-      # Add these steps for proper headers
-      - name: Configure headers
-        run: |
-          echo '/* application/javascript' > dist/_headers
- 
+        run: npx vite build --base=/Personal-Trainer/
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
-      - name: Deploy to GitHub Pages
+            path: './dist'
+      - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
