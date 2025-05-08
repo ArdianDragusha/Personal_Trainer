@@ -93,8 +93,8 @@ function Customerlist() {
         ]);
 
         const csvContent = [
-            csvHeaders.join(','), // Add headers
-            ...csvRows.map(row => row.join(',')) // Add rows
+            csvHeaders.join(','), 
+            ...csvRows.map(row => row.join(','))
         ].join('\n');
 
         const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });

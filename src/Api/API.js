@@ -32,7 +32,6 @@ export async function getTrainings() {
     }
 }
 
-// Customer CRUD operations
 export async function deleteCustomer(customer) {
     const response = await fetch(customer._links.self.href, {
         method: 'DELETE'
@@ -69,7 +68,6 @@ export async function updateCustomer(url, customer) {
     return true;
 }
 
-// Training CRUD operations
 export async function deleteTraining(training) {
     const response = await fetch(training._links.self.href, {
         method: 'DELETE'
